@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão de visitas - Duda Benjamin</title>
+    <link rel="shortcut icon" href="./fotos/Duda Benjamin.jpeg" type="image/x-icon">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7c3aed', // roxo profundo
+                        accent: '#a78bfa',  // roxo suave
+                        dark: '#020617'     // quase preto elegante
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gradient-to-br from-black via-slate-950 to-black text-white min-h-screen flex items-center justify-center">
+
+    <!-- Card -->
+    <div class="flex flex-col sm:flex-row items-center gap-8 
+                bg-white/5 backdrop-blur-xl 
+                border border-white/10 
+                shadow-2xl shadow-black/50
+                rounded-2xl p-8 max-w-3xl w-full mx-4
+                hover:border-primary/40 transition duration-500">
+
+        <!-- Foto -->
+        <div class="relative group">
+            <img src="./fotos/Duda Benjamin.jpeg"
+                class="w-40 h-40 sm:w-48 sm:h-48 rounded-full object-cover 
+                       border border-white/20 shadow-lg"
+                alt="Foto Duda Benjamin">
+
+            <!-- Glow sutil -->
+            <div class="absolute inset-0 rounded-full blur-2xl opacity-20 
+                        bg-primary group-hover:opacity-40 transition"></div>
+        </div>
+
+        <!-- Info -->
+        <div class="text-center sm:text-left">
+
+            <!-- Nome -->
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-wide text-white">
+                Maria Eduarda Benjamin Batista
+            </h1>
+
+            <!-- Linha fina elegante -->
+            <div class="w-16 h-[2px] bg-primary/60 mt-3 mb-4 mx-auto sm:mx-0"></div>
+
+            <!-- Descrição -->
+            <p class="text-lg text-gray-300">
+                Criatividade com propósito e identidade
+            </p>
+
+            <!-- Bio -->
+            <p class="text-sm text-gray-400 mt-3 max-w-md leading-relaxed">
+                Transformando ideias em experiências únicas, com sensibilidade e atenção aos detalhes.
+                Cada criação carrega autenticidade e intenção.
+            </p>
+
+            <!-- Contato -->
+            <div class="mt-5 space-y-2 text-gray-400 text-sm">
+
+                <p>
+                    <a href="https://wa.me/553182221360" target="_blank"
+                        class="hover:text-green-400 transition flex items-center gap-2 justify-center sm:justify-start">
+                        <i class="fab fa-whatsapp"></i> (31) 8222-1360
+                    </a>
+                </p>
+
+                <p>
+                    <a href="mailto:sonhoscarmesim.marketing@gmail.com" target="_blank"
+                        class="hover:text-blue-400 transition flex items-center gap-2 justify-center sm:justify-start">
+                        <i class="fas fa-envelope"></i> sonhoscarmesim.marketing@gmail.com
+                    </a>
+                </p>
+
+            </div>
+
+            <!-- Redes -->
+            <div class="flex justify-center sm:justify-start gap-5 mt-6 text-gray-500">
+
+                <a href="https://www.instagram.com/duda_benjamy/" target="_blank"
+                    class="hover:text-accent transform hover:scale-110 transition duration-300">
+                    <i class="fab fa-instagram fa-xl"></i>
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
