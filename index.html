@@ -1,13 +1,24 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cartão de visitas - Duda Benjamin</title>
-    <link rel="shortcut icon" href="./fotos/Duda Benjamin.jpeg" type="image/x-icon">
+
+    <title>Duda Benjamin | Sangue Carmesim</title>
+
+    <link rel="shortcut icon"
+        href="./fotos/Duda Benjamin.jpeg"
+        type="image/x-icon">
 
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -17,92 +28,308 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#7c3aed', // roxo profundo
-                        accent: '#a78bfa',  // roxo suave
-                        dark: '#020617'     // quase preto elegante
+                        carmesim: '#A51F3D',
+                        blood: '#70172D',
+                        ivory: '#E5D5C5',
+                        night: '#080708',
+                        muted: '#A49A98'
+                    },
+                    fontFamily: {
+                        editorial: ['Cormorant Garamond', 'serif'],
+                        modern: ['Montserrat', 'sans-serif']
                     }
                 }
             }
         }
     </script>
+
+    <style>
+        body {
+            background:
+                radial-gradient(ellipse at 15% 20%, #351019 0%, transparent 40%),
+                radial-gradient(ellipse at 85% 85%, #251016 0%, transparent 40%),
+                #080708;
+        }
+
+        .card {
+            background:
+                linear-gradient(135deg,
+                    rgba(165, 31, 61, 0.09),
+                    transparent 45%),
+                #100D0F;
+            border: 1px solid rgba(165, 31, 61, 0.35);
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.65);
+        }
+
+        .portrait {
+            border: 2px solid #A51F3D;
+            box-shadow: 0 0 35px rgba(165, 31, 61, 0.22);
+        }
+
+        .ornament {
+            color: #A51F3D;
+            letter-spacing: 7px;
+        }
+
+        .contact-link {
+            transition: 0.3s ease;
+        }
+
+        .contact-link:hover {
+            color: #E5D5C5;
+            transform: translateX(4px);
+        }
+
+        .social-link {
+            transition: 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: #C74764;
+            transform: translateY(-4px);
+        }
+
+        .divider {
+            background: linear-gradient(
+                90deg,
+                transparent,
+                #A51F3D,
+                transparent
+            );
+        }
+    </style>
 </head>
 
-<body class="bg-gradient-to-br from-black via-slate-950 to-black text-white min-h-screen flex items-center justify-center">
+<body class="min-h-screen flex items-center justify-center
+             text-ivory px-4 py-12">
 
-    <!-- Card -->
-    <div class="flex flex-col sm:flex-row items-center gap-8 
-                bg-white/5 backdrop-blur-xl 
-                border border-white/10 
-                shadow-2xl shadow-black/50
-                rounded-2xl p-8 max-w-3xl w-full mx-4
-                hover:border-primary/40 transition duration-500">
+    <main class="card relative overflow-hidden
+                 rounded-sm max-w-4xl w-full p-7 sm:p-12">
 
-        <!-- Foto -->
-        <div class="relative group">
-            <img src="./fotos/Duda Benjamin.jpeg"
-                class="w-40 h-40 sm:w-48 sm:h-48 rounded-full object-cover 
-                       border border-white/20 shadow-lg"
-                alt="Foto Duda Benjamin">
+        <!-- Elementos decorativos -->
 
-            <!-- Glow sutil -->
-            <div class="absolute inset-0 rounded-full blur-2xl opacity-20 
-                        bg-primary group-hover:opacity-40 transition"></div>
+        <div class="absolute top-0 left-0 w-20 h-20
+                    border-t border-l border-carmesim/50"></div>
+
+        <div class="absolute bottom-0 right-0 w-20 h-20
+                    border-b border-r border-carmesim/50"></div>
+
+        <div class="absolute top-8 right-8 opacity-20
+                    text-carmesim text-5xl font-editorial">
+            ❧
         </div>
 
-        <!-- Info -->
-        <div class="text-center sm:text-left">
+        <!-- Cabeçalho editorial -->
 
-            <!-- Nome -->
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-wide text-white">
-                Maria Eduarda Benjamin Batista
-            </h1>
+        <header class="text-center mb-10">
 
-            <!-- Linha fina elegante -->
-            <div class="w-16 h-[2px] bg-primary/60 mt-3 mb-4 mx-auto sm:mx-0"></div>
-
-            <!-- Descrição -->
-            <p class="text-lg text-gray-300">
-                Criatividade com propósito e identidade
+            <p class="font-modern text-[10px] tracking-[0.45em]
+                      text-muted uppercase">
+                Editora Sangue Carmesim
             </p>
 
-            <!-- Bio -->
-            <p class="text-sm text-gray-400 mt-3 max-w-md leading-relaxed">
-                Transformando ideias em experiências únicas, com sensibilidade e atenção aos detalhes.
-                Cada criação carrega autenticidade e intenção.
+            <div class="flex items-center justify-center gap-4 mt-4">
+                <div class="h-px w-12 bg-carmesim/60"></div>
+
+                <span class="ornament text-sm">✦</span>
+
+                <div class="h-px w-12 bg-carmesim/60"></div>
+            </div>
+
+            <p class="font-editorial italic text-xl
+                      text-ivory/60 mt-3">
+                Histórias que deixam marcas.
             </p>
 
-            <!-- Contato -->
-            <div class="mt-5 space-y-2 text-gray-400 text-sm">
+        </header>
 
-                <p>
-                    <a href="https://wa.me/553182221360" target="_blank"
-                        class="hover:text-green-400 transition flex items-center gap-2 justify-center sm:justify-start">
-                        <i class="fab fa-whatsapp"></i> (31) 8222-1360
-                    </a>
+        <!-- Conteúdo principal -->
+
+        <section class="flex flex-col sm:flex-row
+                        items-center gap-9 sm:gap-12">
+
+            <!-- Fotografia -->
+
+            <div class="relative shrink-0">
+
+                <div class="absolute -inset-3
+                            border border-carmesim/30
+                            rotate-45"></div>
+
+                <img
+                    src="./fotos/Duda Benjamin.jpeg"
+                    alt="Fotografia de Duda Benjamin"
+                    class="portrait relative w-44 h-44 sm:w-56 sm:h-56
+                           object-cover rounded-sm">
+
+                <div class="absolute -bottom-4 -right-4
+                            bg-carmesim text-ivory
+                            w-12 h-12 flex items-center
+                            justify-center rounded-full
+                            shadow-lg">
+
+                    <i class="fas fa-feather-alt text-lg"></i>
+
+                </div>
+
+            </div>
+
+            <!-- Informações -->
+
+            <div class="text-center sm:text-left flex-1">
+
+                <p class="font-modern text-[10px]
+                          tracking-[0.35em] uppercase
+                          text-carmesim mb-2">
+                    Cofundadora
                 </p>
 
-                <p>
-                    <a href="mailto:sonhoscarmesim.marketing@gmail.com" target="_blank"
-                        class="hover:text-blue-400 transition flex items-center gap-2 justify-center sm:justify-start">
-                        <i class="fas fa-envelope"></i> sonhoscarmesim.marketing@gmail.com
-                    </a>
+                <h1 class="font-editorial font-semibold
+                           text-4xl sm:text-5xl md:text-6xl
+                           leading-tight text-ivory">
+
+                    Duda Benjamin
+
+                </h1>
+
+                <p class="font-editorial text-xl
+                          italic text-ivory/50 mt-1">
+
+                    Maria Eduarda Benjamin Batista
+
+                </p>
+
+                <div class="h-px w-20 divider
+                            mt-5 mb-5
+                            mx-auto sm:mx-0"></div>
+
+                <h2 class="font-editorial text-2xl
+                           text-ivory">
+
+                    Entre palavras e possibilidades.
+
+                </h2>
+
+                <p class="font-modern text-xs sm:text-sm
+                          leading-7 text-muted mt-3
+                          max-w-md">
+
+                    Uma das mentes por trás da Sangue
+                    Carmesim. Construindo um espaço onde
+                    histórias encontram identidade,
+                    criatividade e liberdade para existir.
+
                 </p>
 
             </div>
 
-            <!-- Redes -->
-            <div class="flex justify-center sm:justify-start gap-5 mt-6 text-gray-500">
+        </section>
 
-                <a href="https://www.instagram.com/duda_benjamy/" target="_blank"
-                    class="hover:text-accent transform hover:scale-110 transition duration-300">
-                    <i class="fab fa-instagram fa-xl"></i>
+        <!-- Separador -->
+
+        <div class="divider h-px w-full mt-10 mb-8"></div>
+
+        <!-- Contatos -->
+
+        <section class="flex flex-col sm:flex-row
+                        justify-between gap-8">
+
+            <div class="space-y-4">
+
+                <p class="font-modern text-[9px]
+                          uppercase tracking-[0.3em]
+                          text-carmesim">
+
+                    Entre em contato
+
+                </p>
+
+                <a href="https://wa.me/553182221360"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="contact-link flex items-center
+                          gap-3 font-modern text-xs
+                          text-muted">
+
+                    <i class="fab fa-whatsapp text-lg
+                              text-carmesim"></i>
+
+                    (31) 8222-1360
+
+                </a>
+
+                <a href="mailto:sonhoscarmesim.marketing@gmail.com"
+                   class="contact-link flex items-center
+                          gap-3 font-modern text-xs
+                          text-muted">
+
+                    <i class="fas fa-envelope text-lg
+                              text-carmesim"></i>
+
+                    sonhoscarmesim.marketing@gmail.com
+
                 </a>
 
             </div>
 
-        </div>
-    </div>
+            <!-- Redes sociais -->
+
+            <div class="text-center sm:text-right">
+
+                <p class="font-modern text-[9px]
+                          uppercase tracking-[0.3em]
+                          text-carmesim mb-5">
+
+                    Acompanhe
+
+                </p>
+
+                <a href="https://www.instagram.com/duda_benjamy/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Instagram de Duda Benjamin"
+                   class="social-link inline-flex
+                          items-center justify-center
+                          w-11 h-11 border border-carmesim/40
+                          text-muted rounded-full">
+
+                    <i class="fab fa-instagram text-xl"></i>
+
+                </a>
+
+                <p class="font-editorial italic
+                          text-sm text-muted mt-3">
+
+                    @duda_benjamy
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Rodapé -->
+
+        <footer class="text-center mt-10">
+
+            <p class="font-editorial italic
+                      text-sm text-ivory/30">
+
+                "Toda história merece encontrar seu leitor."
+
+            </p>
+
+            <p class="font-modern text-[8px]
+                      tracking-[0.4em] uppercase
+                      text-carmesim/60 mt-4">
+
+                Sangue Carmesim · Desde sempre, histórias.
+
+            </p>
+
+        </footer>
+
+    </main>
 
 </body>
-
 </html>
